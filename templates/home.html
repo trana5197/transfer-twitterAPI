@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %} HOME PAGE {% endblock %}
+{% block content %}
+<!-- <h1>HOME PAGE</h1> -->
+
+<form action="/displayTweets" method="post">
+    <label for="account">
+        <h3>SELECT THE LASTEST 20 TWEETS OF:</h3>
+    </label>
+    <select name="twitterAcc">
+        <option value="">SELECT ONE</option>
+        <option value="FabrizioRomano">Fabrizio Romano</option>
+        <option value="DiMarzio">Di Marzio</option>
+        <option value="JPercyTelegraph">J Percy Telegraph</option>
+        <option value="bbcsport_david">BBC Sport David</option>
+        <option value="TelegraphDucker">Telegraph Ducker</option>
+        <option value="MarkOgden_">Mark Ogden</option>
+        <option value="garyjacob">Gary Jacob</option>
+        <option value="_ChrisBascombe">Chris Bascombe</option>
+        <option value="simonpeach">Simon Peach</option>
+        <option value="ed_aarons">Ed Aarons</option>
+        <!-- <option value="all">SELECT ALL (LATEST 100)</option> -->
+    </select>
+    <input type="submit" value="Generate">
+</form>
+
+
+{% endblock %}

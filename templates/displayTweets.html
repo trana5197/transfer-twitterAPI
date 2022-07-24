@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %} DISPLAY TWEETS {% endblock %}
+{% block content %}
+<!-- <h1>DISPLAY TWEETS</h1> -->
+<h1>{{ user }}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>{{heading[0]}}</th>
+            <th>{{heading[1]}}</th>
+            <th>{{heading[2]}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for dt in data %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ dt[0] }}</td>
+            <td>{{ dt[1] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
